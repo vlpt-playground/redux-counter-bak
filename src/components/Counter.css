@@ -1,0 +1,27 @@
+.Counter {
+    /* 화면 중앙 정렬 */
+    position: relative;
+}
+
+.Counter .circle {
+    /* 레이아웃 */
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 색상 */
+    color: white;
+    /* 폰트 */
+    font-size: 3rem;
+    /* 기타 */
+    border-radius: 5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.75s;
+    margin: 1rem;
+}
+
+.Counter .randomize {
+    position: absolute;
+}
