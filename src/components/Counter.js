@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Counter.css';
 
-const Counter = ({number, color, onIncrement, onDecrement, onSetColor}) => {
+const Counter = ({number, color, index, onIncrement, onDecrement, onSetColor}) => {
     return (
         <div 
             className="Counter" 
-            onClick={onIncrement} 
+            onClick={() => onIncrement(index)} 
             onContextMenu={
                 (e) => { 
                     e.preventDefault(); 
-                    onDecrement();
+                    onDecrement(index);
                 }
             } 
-            onDoubleClick={onSetColor}>
+            onDoubleClick={() => onSetColor(index)}>
             <div className="circle" style={{backgroundColor: color}}>
                 {number}
             </div>
